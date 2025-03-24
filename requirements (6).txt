@@ -5,21 +5,8 @@ langsmith
 langchain_community
 langchain_core
 streamlit
-pypdf
-bs4
-arxiv
-pymupdf
-wikipedia
-langchain-text-splitters
-langchain-openai
-chromadb
-sentence-transformers
-langchain_huggingface
-faiss-cpu
-langchain_chroma
-duckdb
-pandas
-openai
-langchain-groq
-torch
-
+ollama
+langchain_ollama
+-U langchain_ollama
+ollama run gemmi3:1b
+ollama run gemmi3:4b

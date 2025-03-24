@@ -1,4 +1,4 @@
-## ----------------Enhanced Q&A Chatbot With Gemma3:1b, Gemma3:4b------------------------
+#                   Enhanced Q&A Chatbot With Gemma3:1b, Gemma3:4b
 
  It uses 'Ollama' class of langchain community to generate response to the user query. 
  The user can select the Ollama model from the sidebar and adjust the response parameters

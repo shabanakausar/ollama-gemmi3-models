@@ -1,3 +1,4 @@
+dotenv
 langchain
 ollama
 python-dotenv

@@ -13,7 +13,6 @@
 
 import streamlit as st
 import os
-import langchain
 from dotenv import load_dotenv
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
@@ -39,7 +38,7 @@ prompt = ChatPromptTemplate.from_messages(
 )
 
 def generate_response(question, llm, temperature, max_tokens):
-    llm  = Ollama(model=llm)
+    llm  = OllamaLLM(model=llm)
     output_parser = StrOutputParser()
     chain = prompt|llm | output_parser
     answer = chain.invoke({'question' : question}) 
@@ -49,7 +48,7 @@ def generate_response(question, llm, temperature, max_tokens):
 st.title("Enhanced Q&A Chatbot With Gemma3")
 
 st.sidebar.title("Settings")
-llm  = st.sidebar.selectbox("Select Ollama Model", ["Gemma3:1b", "Gemma3:4b"])
+llm  = st.sidebar.selectbox("Select Ollama Model", ["deepseek-r1:1.5b","Gemma3:1b", "Gemma3:4b"])
 
 # adjust response parameter
 temperature = st.sidebar.slider("Temperature", min_value = 0.0, max_value = 1.0, value = 0.7)
